@@ -1,0 +1,149 @@
+#mainNav { 
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background-color:dimgray;
+    opacity: 90%;
+    position: fixed;
+    top: 0;
+    width: 100%;  
+    z-index: 999;
+    transition: background-color 0.5s ease;
+}
+
+.navbar-nav .nav-item {
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10%;
+}
+
+.navbar-nav .nav-item.active {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-nav .nav-item .nav-link {
+    position: relative; 
+    color: #fff; 
+}
+
+.navbar-nav .nav-item .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff; 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after,
+.navbar-nav .nav-item.active .nav-link::after {
+    opacity: 1;/
+}
+
+.navbar-brand.navbar-white {
+    color: #fff;
+}
+
+
+* {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+.btn-block {
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+.social-icons a {
+    color: #000;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: dimgrey;
+    transform: scale(1.2);
+}
+
+.form-control {
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #fca311;
+}
+
+.btn {
+    transition: background-color 0.3s ease;
+    background-color: gray;
+    border: none;
+}
+
+.btn:hover {
+    background-color:dimgrey ;
+}
+
+.form-group:hover .form-control {
+    background-color: #f0f0f0; 
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.label-text {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 0.8em;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus + .label-text, .form-control:not(:placeholder-shown) + .label-text {
+    top: -12px;
+    left: 8px;
+    font-size: 0.6em;
+    color: #555;
+}
+
+.card-project {
+    border: none;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.card-project:hover {
+    transform: translateY(-5px);
+}
+
+.card-project a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+.card-project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-project .card-body {
+    padding: 1.25rem;
+}
+
+.card-project .card-body:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}

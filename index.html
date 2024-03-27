@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Calle</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-gradient-light d-flex color-default" id="mainNav">
+        <!-- Contenido de la barra de navegación -->
+        <a class="navbar-brand navbar-white" href="#">Daniel Calle</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link navbar-white" href="#sobre-mi">Sobre Mí</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-white" href="#proyectos">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-white" href="#contacto">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-white" href="./resources/Jair Calle - CV.pdf" download class="btn btn-primary btn-download mt-3">Descargar CV</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="sobre-mi" class="bg-gradient-dark py-5" style="margin-top: 40px;">
+        <!-- Contenido de la sección Sobre Mí -->   
+        <div class="container-fluid about">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="mb-1" id="aboutTitle">Daniel Calle</h2>
+                    <h4 class="mb-4" id="aboutTitle">Desarrollador de Software</h4>
+                    <p style="color: #555;">Soy Daniel, Desarrollador BackEnd y un joven apasionado por el desarrollo y la ingeniería de software, la astronomía y los idiomas. Mi mayor motivación es la de aprender y adquirir nuevos conocimientos día a día. Soy una persona creativa, curiosa, comprometida, autodidacta y me adapto bien al trabajo en equipo. Tengo conocimientos técnicos tales como la construcción de una REST API en Spring Boot, diseño y modelado de bases de datos SQL y despliegue en AWS.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-4 text-center">                    
+                    <img src="./img/imgPerfil.jpg" alt="Imagen de Perfil" class="img-fluid rounded-circle" width="200">
+                    <!-- Agregamos el botón "Descargar CV" debajo de la imagen -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="py-5 bg-light">
+        <!-- Contenido de la sección Proyectos -->
+        <div class="container">
+            <h2 class="text-center mb-4">Proyectos</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card card-project">
+                        <a href="https://gestor-biblioteca-psi.vercel.app/" target="_blank">
+                            <img src="./img/imgGestor.png" class="card-img-top" alt="Gestor de Biblioteca">
+                            <div class="card-body">
+                                <h5 class="card-title">Gestor de Biblioteca</h5>
+                                <p class="card-text">Gestor para bibliotecas con dos funcionalidades, las cuáles son agregar usuario y agregar libro. Construido con HTML, CSS, Bootstrap y JavaScript.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-project">
+                        <a href="https://github.com/jdanielcalle/AppAsistenciasV2" target="_blank">
+                            <img src="./img/imgAsistencia.png" class="card-img-top" alt="Aplicación de Asistencias">
+                            <div class="card-body">
+                                <h5 class="card-title">Aplicación de Asistencias</h5>
+                                <p class="card-text">Aplicación de asistencias de cursos, dónde el docente puede  gestionar sus cursos y estudiantes. Construido en C# y usando como SGBD SQL Server.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-project">
+                        <a href="https://workshop-myportfolio-psi.vercel.app/" target="_blank">
+                            <img src="./img/imgPortfolio.png" class="card-img-top" alt="Portafolio Web">
+                            <div class="card-body">
+                                <h5 class="card-title">Portafolio Web</h5>
+                                <p class="card-text">Portafolio Web dónde puedes leer sobre mí, puedes ver algunos de mis proyectos y además puedes contactarme. Construido con HTML, CSS, Bootstrap y JavaScript.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Añade más proyectos aquí -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-5">
+        <!-- Contenido de la sección Contacto -->
+        <div class="col-md-6 mx-auto">
+            <h2 class="text-center mb-4">Contacto</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" oninput="handleInputChange(this)" placeholder="Ingrese su nombre">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" class="form-control" oninput="handleInputChange(this)" placeholder="Ingrese su correo electrónico">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" rows="5" class="form-control" oninput="handleInputChange(this)" placeholder="Ingrese su mensaje"></textarea>
+                </div>
+                <div id="errorContainer" class="text-danger"></div>
+                <button type="submit" class="btn btn-success btn-block">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Pie de Página -->
+    <footer class="bg-light py-4">
+        <!-- Contenido del pie de página -->
+        <div class="container text-center">
+            <!-- Enlaces de Redes Sociales -->
+            <div class="social-icons text-white">
+                <a href="https://www.linkedin.com/in/jair-daniel-calle-sinitave" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="jdanielcalle0@gmail.com"><i class="far fa-envelope"></i></a>
+                <a href="https://github.com/jdanielcalle" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <!-- Información adicional del pie de página -->
+            <p>&copy; 2024 - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
